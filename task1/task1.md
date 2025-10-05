@@ -1,7 +1,7 @@
 ### 1. Поиск образа
 `docker search redis`
 
-![alt text](img/image-1.png)
+![alt text](/img/image-1.png)
 
 ### 2. Запуск в фоне
 `docker run -d --name my-redis redis`
