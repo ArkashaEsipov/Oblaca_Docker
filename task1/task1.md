@@ -1,7 +1,18 @@
+` sudo usermod -aG docker $USER ` - добавить пользователя в группу докер
+
+`sudo systemctl status docker` - статус докера
+
+`sudo systemctl start docker` - запуск докера
+
+`docker ps` - проверка запущенных контейнеров
+
+
+
+
 ### 1. Поиск образа
 `docker search redis`
 
-![alt text](/img/image-1.png)
+![alt text](image.png)
 
 ### 2. Запуск в фоне
 `docker run -d --name my-redis redis`
