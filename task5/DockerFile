@@ -1,0 +1,2 @@
+FROM my-node-onbuild
+EXPOSE 3000
