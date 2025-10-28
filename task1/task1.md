@@ -6,8 +6,10 @@
 
 `docker ps` - проверка запущенных контейнеров
 
+`docker start` - запуск контейнера
 
 
+`docker images` - все образы
 
 ### 1. Поиск образа
 `docker search redis`
