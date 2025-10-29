@@ -1,0 +1,10 @@
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS          PORTS                                          NAMES
+59c8335abbf2   redis                "docker-entrypoint.s…"   50 minutes ago   Up 50 minutes   6379/tcp                                       r1
+49ac8e41aeb1   net-alias-app        "docker-entrypoint.s…"   2 hours ago      Up 2 hours      0.0.0.0:3004->3004/tcp, [::]:3004->3004/tcp    net-alias-app
+09a2651e0e97   redis                "docker-entrypoint.s…"   4 hours ago      Up 4 hours      6379/tcp                                       redis-net
+3d1b2cde2a14   node_t8              "docker-entrypoint.s…"   5 hours ago      Up 5 hours      0.0.0.0:3002->3002/tcp, [::]:3002->3002/tcp    node_t8
+7ee9681d873c   child_t5             "docker-entrypoint.s…"   12 hours ago     Up 12 hours     0.0.0.0:3001->3001/tcp, [::]:3001->3001/tcp    onbild_t5
+d8c59823d228   webserver-image:v1   "/docker-entrypoint.…"   13 hours ago     Up 13 hours     0.0.0.0:8080->80/tcp, [::]:8080->80/tcp        my-webserver
+ddb1194e6fe0   nodejs_t4            "docker-entrypoint.s…"   29 hours ago     Up 13 hours     0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp    nodejs_t4
+1c9ed9853546   webserve_t3:v1       "nginx -g 'daemon of…"   37 hours ago     Up 13 hours     0.0.0.0:80->80/tcp, [::]:80->80/tcp, 443/tcp   modest_wing
+a4ec1821868d   redis:latest         "docker-entrypoint.s…"   5 days ago       Up 13 hours     0.0.0.0:6379->6379/tcp, [::]:6379->6379/tcp    redisHostPort
