@@ -86,3 +86,33 @@ ark@Ubuntu:~/MyCode/Oblaca_Docker/task9$ curl http://localhost:3003/
 ark@Ubuntu:~/MyCode/Oblaca_Docker/task9$ curl http://localhost:3003/
 <h1>Hello!</h1><p>Visited 5 times.</p>
 ```
+
+### Создание сети и подключение к ней redis с использованием псевдонима
+`docker network create frontend-network2`
+`docker network connect --alias db frontend-network2 redis-net`
+
+### подключение нового контейнера к redis в новой сети + тест связи
+```
+...
+const client = redis.createClient(6379, 'db'); 
+...
+```
+
+```
+curl http://localhost:3004/
+<h1>Hello!</h1><p>Visited 1 times.</p>
+
+ark@Ubuntu:~/MyCode/Oblaca_Docker/task9_aliasApp$ curl http://localhost:3004/
+<h1>Hello!</h1><p>Visited 2 times.</p>
+
+ark@Ubuntu:~/MyCode/Oblaca_Docker/task9_aliasApp$ curl http://localhost:3004/
+<h1>Hello!</h1><p>Visited 3 times.</p>
+```
+
+### Отключаем redis от сети front... и проверяем работу приложения node.js
+`docker network disconnect frontend-network redis-net`
+
+```
+rk@Ubuntu:~/MyCode/Oblaca_Docker/task9_aliasApp$ curl http://localhost:3003/
+curl: (52) Empty reply from server
+```
