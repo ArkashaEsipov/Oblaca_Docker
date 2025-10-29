@@ -1,0 +1,5 @@
+FROM alpine
+ADD . /app
+COPY cmd.sh /cmd.sh
+RUN chmod +x /cmd.sh
+CMD ["sh", "-c", "/cmd.sh"]
