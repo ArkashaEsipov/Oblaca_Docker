@@ -1,13 +1,12 @@
-` sudo usermod -aG docker $USER ` - добавить пользователя в группу докер
+## Задание 1
+
+`sudo usermod -aG docker $USER ` - добавить пользователя в группу докер
 
 `sudo systemctl status docker` - статус докера
 
 `sudo systemctl start docker` - запуск докера
 
-`docker ps` - проверка запущенных контейнеров
-
 `docker start` - запуск контейнера
-
 
 `docker images` - все образы
 

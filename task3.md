@@ -1,4 +1,6 @@
-### 3. Dockerfile
+## Задание 3
+### Dockerfile
+
 ```
 FROM nginx:1.11-alpine
 COPY index.html /usr/share/nginx/html/index.html
@@ -6,13 +8,13 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 ```
-
+### Команды работы:
 
 ` docker build -t webserve_t3:v1 . ` - сборка
 
 `docker run -d -p 80:80 webserve_t3:v1 ` - запуск
 
-#### Проверка сайта
+### Проверка работы контейнера:
 ```
 ark@Ubuntu:~/MyCode/Oblaca_Docker/task3$ curl http://localhost
 <!DOCTYPE html>

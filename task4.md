@@ -1,4 +1,5 @@
-### 3. Dockerfile
+## Задание 4
+### DockerFile
 
 ```
 FROM node:10-alpine
@@ -11,21 +12,16 @@ EXPOSE 3000
 CMD [ "npm", "start" ]
 ```
 
-chmod +x bin/www
+### Команды работы:
 
-docker build -t nodejs_t4 .
+`chmod +x bin/www` -
 
-docker run -d --name nodejs_t4 -p 3000:3000 nodejs_t4
+`docker build -t nodejs_t4 .` - 
 
+`docker run -d --name nodejs_t4 -p 3000:3000 nodejs_t4` - 
 
+### Проверка работы контейнера:
+```
 curl http://localhost:3000
 Hello World from Node.js Docker Container!ark@Ubuntu:~/MyCode/Oblaca_Docker/task4$
-
-
-docker start a4ec1821868d
-
-docker start 97494ba3a4ae
-
-docker start 1c9ed9853546
-
-docker start 0430ab90e050
+```
