@@ -1,0 +1,11 @@
+{
+  "name": "app",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4",
+    "redis": "^4"
+  }
+}
