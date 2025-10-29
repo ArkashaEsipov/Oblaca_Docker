@@ -66,3 +66,12 @@ ark@Ubuntu:~/MyCode/Oblaca_Docker/task8$ curl http://localhost:3002
 ark@Ubuntu:~/MyCode/Oblaca_Docker/task8$ curl http://localhost:3002
 <h1>Hello!</h1><p>Visited 5 times.</p>
 ```
+
+### Запуск Redis-CLI + проверка хранящихся данных
+`docker run -it --link redisHostPort:redis redis redis-cli -h redis`
+
+```
+redis:6379> KEYS *
+1) "visits"
+redis:6379> 
+```
