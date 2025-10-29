@@ -63,8 +63,26 @@ options edns0 trust-ad ndots:0
 # Option ndots from: internal
 ```
 
-###
+### Создаем новую сеть и подключаем redis к ней
 `docker network create frontend-network`
 
 `docker network connect frontend-network redis-net`
 
+### Разворачиваем приложение с пробросом порта 
+```
+From parent_t5
+EXPOSE 3002
+```
+`docker build -t network-app .`
+
+`docker run -d --name node-app --net=frontend-network -p 3003:3002 network-app`
+
+### Тест работы приложения
+```
+curl http://localhost:3003/
+<h1>Hello!</h1><p>Visited 3 times.</p>
+ark@Ubuntu:~/MyCode/Oblaca_Docker/task9$ curl http://localhost:3003/
+<h1>Hello!</h1><p>Visited 4 times.</p>
+ark@Ubuntu:~/MyCode/Oblaca_Docker/task9$ curl http://localhost:3003/
+<h1>Hello!</h1><p>Visited 5 times.</p>
+```
