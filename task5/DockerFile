@@ -1,2 +1,2 @@
 FROM parent_t5
-EXPOSE 3000
+EXPOSE 3001
