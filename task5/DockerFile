@@ -1,2 +1,2 @@
-FROM my-node-onbuild
+FROM parent_t5
 EXPOSE 3000
